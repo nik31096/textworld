@@ -1,2 +1,3 @@
 # textworld
-Microsoft TextWorld environment is used to train different natural language reinforcement learning agent.
+Microsoft TextWorld https://www.microsoft.com/en-us/research/project/textworld/ text-based environment is used to train different natural language reinforcement learning agent.
+
