@@ -1,5 +1,7 @@
 import logging
 import numpy as np
+import yaml
+from pprint import pprint
 
 import torch
 import torch.nn.functional as F
@@ -80,3 +82,13 @@ class LSTM_DQN(torch.nn.Module):
         for i in range(len(self.action_scorers)):
             action_ranks.append(self.action_scorers[i].forward(hidden))  # batch x n_vocab
         return action_ranks
+
+
+if __name__ == '__main__':
+    with open("config.yaml") as reader:
+        model_config = yaml.safe_load(reader)
+
+    with open("./vocab.txt") as f:
+        word_vocab = f.read().split("\n")
+    model = LSTM_DQN(model_config['model'], word_vocab)
+    pprint(model.train())

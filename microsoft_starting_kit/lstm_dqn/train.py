@@ -41,7 +41,7 @@ def train(game_files):
     env_id = textworld.gym.make_batch(env_id, batch_size=agent.batch_size, parallel=True)
     env = gym.make(env_id)
 
-    for epoch_no in range(1, agent.nb_epochs + 1):
+    for epoch_no in range(1, 10):
         stats = {
             "scores": [],
             "steps": [],
@@ -68,11 +68,20 @@ def train(game_files):
         score = sum(stats["scores"]) / agent.batch_size
         steps = sum(stats["steps"]) / agent.batch_size
         print("Epoch: {:3d} | {:2.1f} pts | {:4.1f} steps".format(epoch_no, score, steps))
+    agent.finish()
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="Train an agent.")
-    parser.add_argument("games", metavar="game", nargs="+",
-                       help="List of games to use for training.")
-    args = parser.parse_args()
-    train(args.games)
+    # parser = argparse.ArgumentParser(description="Train an agent.")
+    # parser.add_argument("games", metavar="game", nargs="+",
+    #                   help="List of games to use for training.")
+    # args = parser.parse_args()
+    # train(["../sample_games/tw-cooking-recipe3+cook+cut-2057SPdQu0mWiv0k.ulx"])
+    from pathlib import Path
+    from pprint import pprint as print
+    train_dir = Path('../sample_games/')
+    games = [str(file.relative_to(".")) for file in train_dir.iterdir() if file.suffix == '.ulx']
+    print(games)
+    #games = [file for file in os.listdir('../sample_games/') if file[-3:] == 'ulx']
+    #train(games)
+
