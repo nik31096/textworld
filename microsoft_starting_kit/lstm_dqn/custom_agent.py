@@ -142,7 +142,7 @@ class CustomAgent:
 
         # optimizer
         parameters = filter(lambda p: p.requires_grad, self.model.parameters())
-        self.optimizer = torch.optim.Adam(parameters, lr=self.config['training']['optimizer']['learning_rate'])
+        self.optimizer = torch.optim.RMSprop(parameters, lr=self.config['training']['optimizer']['learning_rate'])
 
         # epsilon greedy
         self.epsilon_anneal_episodes = self.config['general']['epsilon_anneal_episodes']
@@ -654,7 +654,7 @@ class CustomAgent:
         loss = F.smooth_l1_loss(q_value * mask, rewards * mask)
         return loss
 
-    def finish(self) -> None:
+    def finish(self, final=False) -> None:
         """
         All games in the batch are finished. One can choose to save checkpoints,
         evaluate on validation set, or do parameter annealing here.
@@ -676,8 +676,10 @@ class CustomAgent:
             avg_score = self.history_avg_scores.get_avg()
             if avg_score > self.best_avg_score_so_far:
                 self.best_avg_score_so_far = avg_score
-
-                save_to = self.model_checkpoint_path + '/' + self.experiment_tag + "_episode_" + str(self.current_episode) + ".pt"
+                if final:
+                    save_to = "final_model_checkpoint.pt"
+                else:
+                    save_to = self.model_checkpoint_path + '/' + self.experiment_tag + "_episode_" + str(self.current_episode) + ".pt"
                 torch.save(self.model.state_dict(), save_to)
                 print("========= saved checkpoint =========")
 
@@ -685,3 +687,4 @@ class CustomAgent:
         # annealing
         if self.current_episode < self.epsilon_anneal_episodes:
             self.epsilon -= (self.epsilon_anneal_from - self.epsilon_anneal_to) / float(self.epsilon_anneal_episodes)
+
