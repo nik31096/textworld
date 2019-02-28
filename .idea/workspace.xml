@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2e53a05b-25c1-4451-a562-ee7c8aa67cb2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microsoft_starting_kit/lstm_dqn/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/microsoft_starting_kit/lstm_dqn/train.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,29 +13,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="custom_agent.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="custom_agent.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microsoft_starting_kit/lstm_dqn/custom_agent.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
+            <state relative-caret-position="5424">
               <caret line="283" column="15" selection-start-line="283" selection-start-column="15" selection-end-line="283" selection-end-column="15" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#701#1166#0" />
                 <element signature="e#1213#2946#0" />
-                <element signature="e#7261#7525#0" />
-                <element signature="e#7635#7962#0" />
-                <element signature="e#8020#8525#0" />
-                <element signature="e#8586#10808#0" />
-                <element signature="e#13021#14951#0" />
-                <element signature="e#15029#16243#0" />
-                <element signature="e#16303#17105#0" />
-                <element signature="e#17179#18522#0" />
-                <element signature="e#18594#19799#0" />
-                <element signature="e#19853#20354#0" />
-                <element signature="e#20484#22068#0" />
-                <element signature="e#22193#26236#0" />
-                <element signature="e#26276#27498#0" />
-                <element signature="e#27530#29627#0" />
               </folding>
             </state>
           </provider>
@@ -54,11 +39,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="train.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="train.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/microsoft_starting_kit/lstm_dqn/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-16">
-              <caret column="21" selection-start-column="21" selection-end-column="21" />
+            <state relative-caret-position="720">
+              <caret line="58" column="27" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="63" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -248,19 +236,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13810043" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13755459" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Tail" order="7" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.13116474" />
+      <window_info anchor="bottom" id="Tail" order="7" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.60440713" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.13116474" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32948583" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -314,20 +301,6 @@
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#701#1166#0" />
             <element signature="e#1213#2946#0" />
-            <element signature="e#7261#7525#0" />
-            <element signature="e#7635#7962#0" />
-            <element signature="e#8020#8525#0" />
-            <element signature="e#8586#10808#0" />
-            <element signature="e#13021#14951#0" />
-            <element signature="e#15029#16243#0" />
-            <element signature="e#16303#17105#0" />
-            <element signature="e#17179#18522#0" />
-            <element signature="e#18594#19799#0" />
-            <element signature="e#19853#20354#0" />
-            <element signature="e#20484#22068#0" />
-            <element signature="e#22193#26236#0" />
-            <element signature="e#26276#27498#0" />
-            <element signature="e#27530#29627#0" />
           </folding>
         </state>
       </provider>
@@ -379,20 +352,6 @@
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#701#1166#0" />
             <element signature="e#1213#2946#0" />
-            <element signature="e#7261#7525#0" />
-            <element signature="e#7635#7962#0" />
-            <element signature="e#8020#8525#0" />
-            <element signature="e#8586#10808#0" />
-            <element signature="e#13021#14951#0" />
-            <element signature="e#15029#16243#0" />
-            <element signature="e#16303#17105#0" />
-            <element signature="e#17179#18522#0" />
-            <element signature="e#18594#19799#0" />
-            <element signature="e#19853#20354#0" />
-            <element signature="e#20484#22068#0" />
-            <element signature="e#22193#26236#0" />
-            <element signature="e#26276#27498#0" />
-            <element signature="e#27530#29627#0" />
           </folding>
         </state>
       </provider>
@@ -434,20 +393,6 @@
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#701#1166#0" />
             <element signature="e#1213#2946#0" />
-            <element signature="e#7261#7525#0" />
-            <element signature="e#7635#7962#0" />
-            <element signature="e#8020#8525#0" />
-            <element signature="e#8586#10808#0" />
-            <element signature="e#13021#14951#0" />
-            <element signature="e#15029#16243#0" />
-            <element signature="e#16303#17105#0" />
-            <element signature="e#17179#18522#0" />
-            <element signature="e#18594#19799#0" />
-            <element signature="e#19853#20354#0" />
-            <element signature="e#20484#22068#0" />
-            <element signature="e#22193#26236#0" />
-            <element signature="e#26276#27498#0" />
-            <element signature="e#27530#29627#0" />
           </folding>
         </state>
       </provider>
@@ -545,20 +490,6 @@
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#701#1166#0" />
             <element signature="e#1213#2946#0" />
-            <element signature="e#7261#7525#0" />
-            <element signature="e#7635#7962#0" />
-            <element signature="e#8020#8525#0" />
-            <element signature="e#8586#10808#0" />
-            <element signature="e#13021#14951#0" />
-            <element signature="e#15029#16243#0" />
-            <element signature="e#16303#17105#0" />
-            <element signature="e#17179#18522#0" />
-            <element signature="e#18594#19799#0" />
-            <element signature="e#19853#20354#0" />
-            <element signature="e#20484#22068#0" />
-            <element signature="e#22193#26236#0" />
-            <element signature="e#26276#27498#0" />
-            <element signature="e#27530#29627#0" />
           </folding>
         </state>
       </provider>
@@ -587,20 +518,6 @@
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#701#1166#0" />
             <element signature="e#1213#2946#0" />
-            <element signature="e#7261#7525#0" />
-            <element signature="e#7635#7962#0" />
-            <element signature="e#8020#8525#0" />
-            <element signature="e#8586#10808#0" />
-            <element signature="e#13021#14951#0" />
-            <element signature="e#15029#16243#0" />
-            <element signature="e#16303#17105#0" />
-            <element signature="e#17179#18522#0" />
-            <element signature="e#18594#19799#0" />
-            <element signature="e#19853#20354#0" />
-            <element signature="e#20484#22068#0" />
-            <element signature="e#22193#26236#0" />
-            <element signature="e#26276#27498#0" />
-            <element signature="e#27530#29627#0" />
           </folding>
         </state>
       </provider>
@@ -642,20 +559,6 @@
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#701#1166#0" />
             <element signature="e#1213#2946#0" />
-            <element signature="e#7261#7525#0" />
-            <element signature="e#7635#7962#0" />
-            <element signature="e#8020#8525#0" />
-            <element signature="e#8586#10808#0" />
-            <element signature="e#13021#14951#0" />
-            <element signature="e#15029#16243#0" />
-            <element signature="e#16303#17105#0" />
-            <element signature="e#17179#18522#0" />
-            <element signature="e#18594#19799#0" />
-            <element signature="e#19853#20354#0" />
-            <element signature="e#20484#22068#0" />
-            <element signature="e#22193#26236#0" />
-            <element signature="e#26276#27498#0" />
-            <element signature="e#27530#29627#0" />
           </folding>
         </state>
       </provider>
@@ -755,35 +658,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microsoft_starting_kit/lstm_dqn/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-16">
-          <caret column="21" selection-start-column="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/microsoft_starting_kit/lstm_dqn/custom_agent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
+        <state relative-caret-position="5424">
           <caret line="283" column="15" selection-start-line="283" selection-start-column="15" selection-end-line="283" selection-end-column="15" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#701#1166#0" />
             <element signature="e#1213#2946#0" />
-            <element signature="e#7261#7525#0" />
-            <element signature="e#7635#7962#0" />
-            <element signature="e#8020#8525#0" />
-            <element signature="e#8586#10808#0" />
-            <element signature="e#13021#14951#0" />
-            <element signature="e#15029#16243#0" />
-            <element signature="e#16303#17105#0" />
-            <element signature="e#17179#18522#0" />
-            <element signature="e#18594#19799#0" />
-            <element signature="e#19853#20354#0" />
-            <element signature="e#20484#22068#0" />
-            <element signature="e#22193#26236#0" />
-            <element signature="e#26276#27498#0" />
-            <element signature="e#27530#29627#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microsoft_starting_kit/lstm_dqn/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="58" column="27" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
