@@ -291,7 +291,9 @@ class CustomAgent:
         for entities in infos["entities"]:
             tmp_nouns, tmp_adjs = [], []
             for name in entities:
+                # name is about like 'block of cheese' or 'front door' or just 'fridge'
                 split = name.split()
+                # but last word in split is always a noun
                 tmp_nouns.append(split[-1])
                 if len(split) > 1:
                     tmp_adjs += split[:-1]
@@ -348,7 +350,12 @@ class CustomAgent:
             if len(d) == 0:
                 description_token_list[i] = ["end"]  # if empty description, insert word "end"
         description_id_list = [_words_to_ids(tokens, self.word2id) for tokens in description_token_list]
-        description_id_list = [_d + _i + _q + _f + _pa for (_d, _i, _q, _f, _pa) in zip(description_id_list, inventory_id_list, quest_id_list, feedback_id_list, prev_action_id_list)]
+        # here concatenation of [description, inventory, quest info, feedback, previous action] appears to be
+        description_id_list = [_d + _i + _q + _f + _pa for (_d, _i, _q, _f, _pa) in zip(description_id_list,
+                                                                                        inventory_id_list,
+                                                                                        quest_id_list,
+                                                                                        feedback_id_list,
+                                                                                        prev_action_id_list)]
 
         input_description = pad_sequences(description_id_list, maxlen=max_len(description_id_list)).astype('int32')
         input_description = to_pt(input_description, self.use_cuda)
@@ -369,7 +376,7 @@ class CustomAgent:
         # turns 5 indices into actual command strings
         if self.word_vocab[verb] in self.single_word_verbs:
             return self.word_vocab[verb]
-        if adj == self.EOS_id:
+        if adj == self.EOS_id:  # ???????????
             res = self.word_vocab[verb] + " " + self.word_vocab[noun]
         else:
             res = self.word_vocab[verb] + " " + self.word_vocab[adj] + " " + self.word_vocab[noun]
@@ -381,7 +388,7 @@ class CustomAgent:
         if adj_2 == self.EOS_id:
             res = res + " " + prep + " " + self.word_vocab[noun_2]
         else:
-            res =  res + " " + prep + " " + self.word_vocab[adj_2] + " " + self.word_vocab[noun_2]
+            res = res + " " + prep + " " + self.word_vocab[adj_2] + " " + self.word_vocab[noun_2]
         return res
 
     def get_chosen_strings(self, chosen_indices):
@@ -567,7 +574,10 @@ class CustomAgent:
                 if mask_np[b] == 0:
                     continue
                 is_prior = rewards_np[b] > 0.0
-                self.replay_memory.push(is_prior, self.cache_description_id_list[b], [item[b] for item in self.cache_chosen_indices], rewards[b], mask[b], dones[b], description_id_list[b], [item[b] for item in self.word_masks_np])
+                self.replay_memory.push(is_prior, self.cache_description_id_list[b],
+                                        [item[b] for item in self.cache_chosen_indices],
+                                        rewards[b], mask[b], dones[b], description_id_list[b],
+                                        [item[b] for item in self.word_masks_np])
 
         # cache new info in current game step into caches
         self.cache_description_id_list = description_id_list

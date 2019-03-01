@@ -69,6 +69,16 @@ class FastUniLSTM(torch.nn.Module):
     def forward(self, x, mask):
 
         def pad_(tensor, n):
+            # this function just add new zero-containing rows downside to tensor example:
+            # a = tensor([[-0.1300, -1.5932],
+            #             [ 0.7012, -0.7941]])
+            # print(pad_(a, 3))
+            #########
+            # tensor([[-0.1300, -1.5932],
+            #         [ 0.7012, -0.7941],
+            #         [ 0.0000,  0.0000],
+            #         [ 0.0000,  0.0000],
+            #         [ 0.0000,  0.0000]])
             if n > 0:
                 zero_pad = torch.autograd.Variable(torch.zeros((n,) + tensor.size()[1:]))
                 if x.is_cuda:

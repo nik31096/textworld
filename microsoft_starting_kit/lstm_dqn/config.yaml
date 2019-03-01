@@ -18,7 +18,7 @@ checkpoint:
   experiment_tag: 'lstm_dqn_150219'
   model_checkpoint_path: 'saved_models'
   load_pretrained: True  # during test, enable this so that the agent load your pretrained model
-  pretrained_experiment_tag: 'lstm_dqn_150219_episode_33000'
+  pretrained_experiment_tag: 'last_checkpoint_model'
   save_frequency: 100
 
 training:

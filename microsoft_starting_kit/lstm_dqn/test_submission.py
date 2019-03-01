@@ -110,8 +110,8 @@ def _play_game(agent_class, agent_class_args, gamefile):
 
     name = "test_{}".format(hash(gamefile))
     env_id = textworld.gym.register_games([gamefile], requested_infos,
-                                            max_episode_steps=MAX_EPISODE_STEPS,
-                                            name=name)
+                                          max_episode_steps=MAX_EPISODE_STEPS,
+                                          name=name)
     env_id = textworld.gym.make_batch(env_id, batch_size=1)
     env = gym.make(env_id)
 
@@ -131,6 +131,7 @@ def _play_game(agent_class, agent_class_args, gamefile):
                 infos["_name"] = game_name
 
             commands = agent.act(obs, scores, dones, infos)
+            print("observation: {}, action: {} \n".format(str(obs), str(commands)))
             all_commands.append(commands)
             obs, scores, dones, infos = env.step(commands)
 
@@ -313,6 +314,7 @@ def main():
         _run_evaluation(CustomAgent, args)
     else:
         _dockerize(args)
+
 
 if __name__ == "__main__":
     main()

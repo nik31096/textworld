@@ -70,6 +70,7 @@ def train(game_files):
         print("Epoch: {:3d} | {:2.1f} pts | {:4.1f} steps".format(epoch_no, score, steps))
     agent.finish(final=True)
 
+
 if __name__ == '__main__':
     # parser = argparse.ArgumentParser(description="Train an agent.")
     # parser.add_argument("games", metavar="game", nargs="+",
