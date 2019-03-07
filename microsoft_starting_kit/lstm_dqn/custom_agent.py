@@ -563,7 +563,8 @@ class CustomAgent:
         greater_than_epsilon = to_pt(greater_than_epsilon, self.use_cuda, type='float')
         less_than_epsilon, greater_than_epsilon = less_than_epsilon.long(), greater_than_epsilon.long()
 
-        chosen_indices = [less_than_epsilon * idx_random + greater_than_epsilon * idx_maxq for idx_random, idx_maxq in zip(word_indices_random, word_indices_maxq)]
+        chosen_indices = [less_than_epsilon * idx_random + greater_than_epsilon * idx_maxq for idx_random, idx_maxq in
+                          zip(word_indices_random, word_indices_maxq)]
         chosen_indices = [item.detach() for item in chosen_indices]
         chosen_strings = self.get_chosen_strings(chosen_indices)
         self.prev_actions = chosen_strings
